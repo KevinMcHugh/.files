@@ -3,7 +3,8 @@ def nice_alias(s, f)
   short = s.strip
   full = f.strip
   throw ArgumentError.new('no spaces allowed ;(') if spaces_in?(short)
-  [alias_for(short, "command #{full}"), alias_for(full, "just say #{short}; #{short}")]
+  [alias_for(short, "command #{full}"), alias_for(full,
+    "echo \"********************just say #{short}********************\"; #{short}")]
 end
 
 def alias_for(aliaz, command)
