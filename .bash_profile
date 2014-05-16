@@ -43,9 +43,9 @@ function fuck() {
 alias b='command bundle'
 alias bundle='echo "********************just say b********************"; b'
 alias be='command bundle exec'
-alias ber='be rake'
+alias ber='command bundle exec rake'
 alias bi='command bundle install'
-alias specs='ber spec'
+alias specs='command bundle exec rake spec'
 
 
 alias gi='command gem install'
@@ -61,3 +61,9 @@ alias powder='echo "********************just say p********************"; p'
 alias s='command source $HOME/.bash_profile'
 alias r='command rake'
 alias rake='echo "********************just say r********************"; r'
+alias o='command open'
+alias open='echo "********************just say o********************"; o'
+alias gco='command git co'
+
+__git_complete g __git_main
+__git_complete gco _git_checkout
