@@ -18,7 +18,7 @@ end
 nice = nice_alias(ARGV[0], ARGV[1])
 puts nice
 
-open('.bash_profile', 'a') { |f|
+open('/Users/kevin.mchugh/.bash_profile', 'a') { |f|
   f.puts nice
 }
 
