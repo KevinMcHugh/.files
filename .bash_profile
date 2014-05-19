@@ -1,5 +1,4 @@
 export BASH_CONF="bash_profile"
-echo 'loading .bash_profile'
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -47,9 +46,8 @@ alias ber='command bundle exec rake'
 alias bi='command bundle install'
 alias specs='command bundle exec rake spec'
 
-
 alias gi='command gem install'
-alias t='command tail -f'
+alias t='command tail -f log/development.log'
 alias db='command be rails dbconsole'
 
 alias irb='echo "********************just say pry********************"; command pry'
