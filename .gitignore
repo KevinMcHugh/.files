@@ -2,7 +2,7 @@
 
 !.gitignore
 !.bash_profile
-!.git_config
 !.alias_for.rb
 !.git-completion.sh
 !.git-prompt.sh
+!.gitconfig

@@ -1,0 +1,13 @@
+[alias]
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	g = grep
+	st = status
+	ap = add -p
+	co = checkout
+	df = diff
+	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+[user]
+	email = kevin.mchugh@risk.io
+	name = Kevin McHugh
+[push]
+	default = simple
