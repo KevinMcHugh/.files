@@ -4,7 +4,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 source ~/.git-completion.sh
 source ~/.git-prompt.sh
-source ~/.secret_stuff.bash
+# source ~/.secret_stuff.bash
 
 alias aa="ruby $HOME/.alias_for.rb"
 alias crap="cap"
@@ -15,7 +15,7 @@ alias ls="ls -G"
 alias plsfixtests="cd client && npm install && bundle exec grunt && cd .."
 alias undo-commit="git reset --soft 'HEAD^'"
 
-export PATH="$HOME/bin/:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PS1="\[\e[0;32m\][\u@\h \W]\$\[\e[0m\] "
 
 export GREP_OPTIONS='--color=always'
