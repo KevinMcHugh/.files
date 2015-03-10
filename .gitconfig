@@ -6,6 +6,7 @@
 	co = checkout
 	df = diff
 	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	find = ls-files
 [user]
 	email = kevin.mchugh@risk.io
 	name = Kevin McHugh
