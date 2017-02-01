@@ -4,7 +4,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 source ~/.git-completion.sh
 source ~/.git-prompt.sh
-# source ~/.secret_stuff.bash
+source ~/.secret_stuff.bash
 
 alias aa="ruby $HOME/.alias_for.rb"
 alias crap="cap"
@@ -22,11 +22,18 @@ export GREP_OPTIONS='--color=always'
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}  ${USER}@${HOSTNAME}\007"'
 export EDITOR='subl -w'
 
-export HISTSIZE=50000
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export ULTRAHOOK_NAMESPACE='kevinmchugh'
+
+
 # append all commands to the history file, don't overwrite it at the start of every new session
 shopt -s histappend
+export HISTSIZE=50000
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# export DOCKER_HOST=tcp://192.168.99.100:2376
+# export DOCKER_MACHINE_NAME=default
+# export DOCKER_TLS_VERIFY=1
+# export DOCKER_CERT_PATH=/Users/kev/.docker/machine/machines/default
 
 function fuck() {
   killall -9 -m $2;
@@ -40,7 +47,6 @@ function fuck() {
 
 
 alias b='command bundle'
-alias bundle='echo "********************just say b********************"; b'
 alias be='command bundle exec'
 alias ber='command bundle exec rake'
 alias bi='command bundle install'
@@ -50,18 +56,21 @@ alias gi='command gem install'
 alias t='command tail -f log/development.log'
 alias db='command be rails dbconsole'
 
-alias irb='echo "********************just say pry********************"; command pry'
+alias irb='command pry'
 alias g='command git'
-alias git='echo "********************just say g********************"; g'
-alias p='command powder'
-alias powder='echo "********************just say p********************"; p'
 
 alias s='command source $HOME/.bash_profile'
 alias r='command rake'
-alias rake='echo "********************just say r********************"; r'
 alias o='command open'
-alias open='echo "********************just say o********************"; o'
 alias gco='command git co'
+
+alias dc='docker-compose'
+alias whatwtf='rbenv rehash'
 
 __git_complete g __git_main
 __git_complete gco _git_checkout
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

@@ -7,8 +7,9 @@
 	df = diff
 	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 	find = ls-files
+	wc = whatchanged
 [user]
-	email = kevin.mchugh@risk.io
+	email = kev@kevinmchugh.me
 	name = Kevin McHugh
 [push]
 	default = simple
